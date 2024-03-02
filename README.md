@@ -1,6 +1,15 @@
 # Express.js Starter Template with TypeScript
 
-This is a basic Express.js starter template configured to use TypeScript for development. It includes Prettier for code formatting and linting for maintaining code quality.
+Welcome to the Express.js starter template, configured to use TypeScript for robust and type-safe development. This template includes Prettier for code formatting and ESLint for maintaining code quality.
+
+## What You'll Get After Installation
+
+Upon cloning and setting up this Express.js starter template, you will have access to:
+
+- A fully configured Express.js server with TypeScript.
+- Pre-installed dependencies and dev dependencies for common tasks.
+- Middleware functions to handle global errors, 404 Not Found responses, and request validation.
+- Utility functions to send consistent and formatted responses and to wrap asynchronous route handlers.
 
 ## Installation
 
@@ -61,8 +70,8 @@ Create a .env file in the root directory and add the following variables:
 
 ```bash
 PORT=5000
-DATABASE_URL=Enter your database url
-DB_Name=Enter your database collection name
+DATABASE_URL=mongodb+srv://yourUserName:yourPassword@cluster0.jowkg7d.mongodb.net
+DB_Name=collectionName
 ```
 
 ### 5. Build the TypeScript Code
@@ -116,6 +125,7 @@ The server should now be running at `http://localhost:5000/`.
 This template comes pre-configured with Prettier for code formatting and ESLint for linting.
 
 - **Formate Code With Prettier**
+  Ensure consistent code style by formatting with Prettier:
 
 Using `pnpm`:
 
@@ -135,7 +145,8 @@ Using `npm`:
 npm prettier
 ```
 
-- **Fix Prettier Errors Automatically**
+- **Automatically Fix Prettier Errors**
+  Fix any Prettier formatting errors automatically:
 
 Using `pnpm`:
 
@@ -156,6 +167,7 @@ npm prettier:fix
 ```
 
 - **Lint Code With EsLint**
+  Maintain code quality and catch potential errors with ESLint:
 
 Using `pnpm`:
 
@@ -175,7 +187,8 @@ Using `npm`:
 npm lint
 ```
 
-- **Fix Linting Errors Automatically**
+- **Automatically Fix ESLint Errors**
+  Fix ESLint errors and adhere to code standards:
 
 ```bash
 pnpm lint:fix
@@ -193,4 +206,23 @@ or
 npm lint:fix
 ```
 
-Feel free to use your preferred package manager (`pnpm`, `yarn`, or `npm`) throughout the installation and development process. If you have any questions or run into issues, don't hesitate to reach out for assistance. Happy coding! 🚀
+## Adding Routes
+
+To add new routes to your Express.js application, follow these guidelines:
+
+1. **Create your route handler file** (e.g., `routes/ExampleRoute.ts`) and import it.
+
+2. **Define your routes inside `routes` array of objects with the following structure:**
+
+```bash
+const routes = [
+  { path: '/routesPath', route: ExampleRoute },
+   // Add more routes as needed
+];
+```
+
+Replace `/routesPath` with your desired route path, and `ExampleRoute` with the imported route
+
+Feel free to explore and modify the template to suit your project needs. If you have any questions or run into issues, don't hesitate to reach out for assistance.
+
+Happy coding! 🚀

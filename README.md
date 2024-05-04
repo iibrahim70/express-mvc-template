@@ -30,18 +30,6 @@ Using `pnpm`:
 pnpm i cors dotenv express http-status mongoose zod
 ```
 
-Using `yarn`:
-
-```bash
-yarn add cors dotenv express http-status mongoose zod
-```
-
-Using `npm`:
-
-```bash
-npm install cors dotenv express http-status mongoose zod
-```
-
 ### 3. Install Dev Dependencies
 
 Next, install the development dependencies:
@@ -52,26 +40,21 @@ Using `pnpm`:
 pnpm i -D @types/cors @types/express @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-prettier prettier ts-node-dev typescript
 ```
 
-Using `yarn`:
-
-```bash
-yarn add -D @types/cors @types/express @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-prettier prettier ts-node-dev typescript
-```
-
-Using `npm`:
-
-```bash
-npm install --save-dev @types/cors @types/express @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-prettier prettier ts-node-dev typescript
-```
-
 ### 4. Set Environment Variables
 
 Create a .env file in the root directory and add the following variables:
 
 ```bash
+NODE_ENV=development
 PORT=5000
 DATABASE_URL=mongodb+srv://yourUserName:yourPassword@cluster0.jowkg7d.mongodb.net
 DB_Name=collectionName
+```
+
+Once development work is done, change NODE_ENV to production:
+
+```bash
+NODE_ENV=production
 ```
 
 ### 5. Build the TypeScript Code
@@ -84,18 +67,6 @@ Using `pnpm`:
 pnpm build
 ```
 
-Using `yarn`:
-
-```bash
-yarn build
-```
-
-Using `npm`:
-
-```bash
-npm build
-```
-
 ### 6. Start the Server
 
 Start the development server with:
@@ -104,18 +75,6 @@ Using `pnpm`:
 
 ```bash
 pnpm start:dev
-```
-
-Using `yarn`:
-
-```bash
-yarn start:dev
-```
-
-Using `npm`:
-
-```bash
-npm start:dev
 ```
 
 The server should now be running at `http://localhost:5000/`.
@@ -133,18 +92,6 @@ Using `pnpm`:
 pnpm prettier
 ```
 
-Using `yarn`:
-
-```bash
-yarn prettier
-```
-
-Using `npm`:
-
-```bash
-npm prettier
-```
-
 - **Automatically Fix Prettier Errors**
   Fix any Prettier formatting errors automatically:
 
@@ -152,18 +99,6 @@ Using `pnpm`:
 
 ```bash
 pnpm prettier:fix
-```
-
-Using `yarn`:
-
-```bash
-yarn prettier:fix
-```
-
-Using `npm`:
-
-```bash
-npm prettier:fix
 ```
 
 - **Lint Code With EsLint**
@@ -175,35 +110,13 @@ Using `pnpm`:
 pnpm lint
 ```
 
-Using `yarn`:
-
-```bash
-yarn lint
-```
-
-Using `npm`:
-
-```bash
-npm lint
-```
-
 - **Automatically Fix ESLint Errors**
   Fix ESLint errors and adhere to code standards:
 
+Using `pnpm`:
+
 ```bash
 pnpm lint:fix
-```
-
-or
-
-```bash
-yarn lint:fix
-```
-
-or
-
-```bash
-npm lint:fix
 ```
 
 ## Adding Routes
@@ -216,12 +129,12 @@ To add new routes to your Express.js application, follow these guidelines:
 
 ```bash
 const routes = [
-  { path: '/routesPath', route: ExampleRoute },
+  { path: '/exampleRoute', route: ExampleRoute },
    // Add more routes as needed
 ];
 ```
 
-Replace `/routesPath` with your desired route path, and `ExampleRoute` with the imported route
+Replace `/exampleRoute` with your desired route path, and `ExampleRoute` with the imported route
 
 Feel free to explore and modify the template to suit your project needs. If you have any questions or run into issues, don't hesitate to reach out for assistance.
 

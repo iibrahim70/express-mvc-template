@@ -1,12 +1,12 @@
 import express, { Request, Response } from 'express';
 import cors from 'cors';
 import router from './routes';
-import { globalErrorHandler } from './middlewares/globalErrorHandler';
-import { notFound } from './middlewares/notFound';
+import globalErrorHandler from './middlewares/globalErrorHandler';
+import notFound from './middlewares/notFound';
 
 const app = express();
 
-// parsers
+// middlewares
 app.use(express.json());
 app.use(cors());
 
